@@ -1,0 +1,9 @@
+<h2>Search a Course</h2>
+
+<input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="name..." />
+
+<ul class="search-result">
+  <li *ngFor="let course of courses$ | async" >
+    <span class="col-2">{{course.name}}</span> <span class="badge col-3">{{course.community}}</span>
+  </li>
+</ul>

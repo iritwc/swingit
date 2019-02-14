@@ -1,0 +1,92 @@
+.courses, .search-result{
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+}
+.courses li, .search-result li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: flex;
+
+}
+.courses li > *, .search-result li > * {
+  margin: 0 .3em;
+}
+.col-1 {
+  flex: 0 1 50px;
+}
+.col-2 {
+  flex: 0 1 165px;
+}
+.col-3 {
+  flex: 0 1 70px;
+}
+.courses li:hover, .search-result li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px;
+}
+
+.courses-filter {
+  position: sticky;
+  top: 1em;
+  left: 1rem;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+
+}
+.courses-filter input[type="checkbox"] {
+  opacity: 0;
+}
+.courses-filter input[type="checkbox"] + label {
+  display: inline-block;
+  font-size: small;
+  padding: 0.8em 0.7em 0 0.7em;
+  line-height: 1em;
+  position: relative;
+  left: -12px;
+  top: 0;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px;
+  color: #039be5;
+  /* border: 1px solid #039be5; */
+}
+@media (max-width: 600px) {
+  .courses-filter input[type="checkbox"] + label {
+    left: 0;
+  }
+}
+@media (max-width: 1024px) {}
+
+.courses-filter input[type="checkbox"]:hover + label {
+  color: white;
+  background-color: #039be5;
+  opacity: 0.7;
+}
+.courses-filter input[type="checkbox"]:checked + label {
+  color: white;
+  background-color: #039be5;
+  opacity: 1;
+}

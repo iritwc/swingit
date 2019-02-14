@@ -1,0 +1,16 @@
+<h2>Courses</h2>
+<div class="courses-filter">
+  <div *ngFor="let community of state.communities">
+    <input type="checkbox" [id]="community.id" [checked]="community.checked" (change)="onChange(community)">
+    <label [for]="community.id">{{community.value}}</label>
+  </div>
+</div>
+
+<ul class="courses">
+  <li *ngFor="let course of courses" (click)="onSelect(course)">
+    <span class="col-1">{{course.id}}</span>
+    <span class="col-2">{{course.name}}</span>
+    <span class="badge col-3">{{course.community}}</span>
+    <span>Starts @ {{course.startingDate | date}}</span>
+  </li>
+</ul>
